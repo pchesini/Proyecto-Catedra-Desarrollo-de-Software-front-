@@ -1,7 +1,14 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './home/home/home.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    component: HomeComponent,
+    path:'home'// aca va la ruta de la pagina principal
+  }
+ 
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
