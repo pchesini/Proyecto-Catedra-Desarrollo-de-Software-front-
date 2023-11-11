@@ -5,7 +5,7 @@ import { HomeComponent } from './home/home/home.component';
 const routes: Routes = [
   {
     component: HomeComponent,
-    path:'home'// aca va la ruta de la pagina principal
+    path:'./home/home/home.component'// aca va la ruta de la pagina principal
   }
  
 ];

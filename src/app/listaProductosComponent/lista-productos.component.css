@@ -1,0 +1,13 @@
+.btn-registrar, .searcher, .btn-searcher {
+    font-size: 12px;
+    height: 30px;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    cursor: pointer;
+}

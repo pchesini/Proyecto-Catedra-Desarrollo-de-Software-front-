@@ -17,11 +17,10 @@ export class ListaProductosComponent{
   constructor(private listaProductosService: ListaProductosService,  private router: Router){
     
   }
-
   agregarProducto(): void {
     //nuevo objeto del tipo Producto para agregar a la lista
     const nuevoProducto: Producto = {
-      codigo: '12323',
+      codigo: 12323,
       nombre: 'producto1',
       descripcion: 'descripcion de producto1',
       imagenProducto: 'imagenProducto1'
@@ -34,7 +33,7 @@ export class ListaProductosComponent{
   eliminarProducto(): void {
     
     //se usa el servicio para eliminar un producto por id
-    this.listaProductosService.eliminarProducto('123');
+    this.listaProductosService.eliminarProducto(123);
     
   }
   

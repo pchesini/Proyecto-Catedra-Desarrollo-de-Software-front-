@@ -17,7 +17,7 @@ export class ListaProductosService {
   }
 
 
-  eliminarProducto(codigo: string): ListaProductosService {
+  eliminarProducto(codigo: number): ListaProductosService {
     // REemplazo la lista de productos por otro array resultante
     //del filtro que excluye la tarea por ID
     this.productos = this.productos.filter( producto => producto.codigo !== codigo );
@@ -28,7 +28,7 @@ export class ListaProductosService {
     return this.productos;
   }
 
-  obtenerProducto(codigo: string): Producto | undefined{
+  obtenerProducto(codigo: number): Producto | undefined{
     // La función pop() retorna el producto resultante del filtro por id
     // En caso que no exista, retorna undefined
     return this.productos
@@ -36,7 +36,7 @@ export class ListaProductosService {
         .pop();
   }
 
-  modificarProducto(codigo: string, values: Object = {}): Producto | undefined{
+  modificarProducto(codigo: number, values: Object = {}): Producto | undefined{
     // Obtengo el producto por ID
     let producto = this.obtenerProducto(codigo);
     if (!producto){

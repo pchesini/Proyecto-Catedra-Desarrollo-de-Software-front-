@@ -8,7 +8,7 @@ import { Producto } from '../interfaces/Producto';
 export class ProductoComponent {
   
   producto : Producto = {
-    id:1,
+   // id:1,
     codigo:1234,
     nombre: 'producto 1',
     descripcion: 'Descripcion porducto 1',

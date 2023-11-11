@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { Producto } from './compPrincipal/interfaces/Producto';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,6 +9,9 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class AppComponent {
   title = 'ecommerce';
+productos: any;
+
+
   constructor(private modalService: NgbModal) {
 
   }

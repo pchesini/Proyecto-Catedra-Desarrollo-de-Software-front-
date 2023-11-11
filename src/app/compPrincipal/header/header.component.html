@@ -8,7 +8,7 @@
       <div class="collapse navbar-collapse" id="navbarScroll">
         <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" routerLink="home">Home</a>
+            <a class="nav-link active" aria-current="page" routerLink="">Home</a>
           </li>
           
           <li class="nav-item dropdown">
@@ -16,21 +16,22 @@
             Menu
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Ventas</a></li>
-              <li><a class="dropdown-item" href="#">Clientes</a></li>
+              <li><a class="dropdown-item" routerLink="/venta">Ventas</a></li>
+              <li><a class="dropdown-item" routerLink="/listaProductos">Productos</a></li>
+              <li><a class="dropdown-item" routerLink="#">Ofertas</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Agregar Producto</a></li>
-              <li><a class="dropdown-item" href="#">Ver Productos</a></li>
-              <li><a class="dropdown-item" href="#">Publicar Oferta</a></li>
-              <li><a class="dropdown-item" href="#">Ver Ofertas Publicadas</a></li>
+              <li><a class="dropdown-item" routerLink="#">Perfil</a></li>
+              <li><a class="dropdown-item" routerLink="#">Estadisticas</a></li>
+              <li><a class="dropdown-item" routerLink="#">Ayuda</a></li>
             </ul>
-          </li>
 
         </ul>
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Producto..." aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Buscar</button>
         </form>
+
+        <app-boton-log-in></app-boton-log-in>
       </div>
     </div>
   </nav>
