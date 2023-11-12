@@ -15,6 +15,7 @@ import { AgregarProductoComponent } from './compPrincipal/agregarProducto/agrega
 import { InicioComponent } from './compPrincipal/inicio/inicio.component';
 import { BotonLogInComponent } from './boton-log-in/boton-log-in.component';
 import { VentaComponent } from './venta/venta.component';
+import { SidebarComponent } from './compPrincipal/sidebar/sidebar.component';
 
 
 const routes: Route[] = [
@@ -36,6 +37,7 @@ const routes: Route[] = [
     InicioComponent,
     BotonLogInComponent,
     VentaComponent,
+    SidebarComponent,
   ],
   imports: [
     BrowserModule,

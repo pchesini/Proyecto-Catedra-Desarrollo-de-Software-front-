@@ -1,0 +1,5 @@
+.container-fluid {
+    background: rgba(255, 255, 255, 0.9);
+    background: url('/src/assets/imgs/fondo.png') no-repeat center center fixed;
+    background-size: cover;
+  }
