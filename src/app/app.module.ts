@@ -11,19 +11,19 @@ import { ProductoComponent } from './compPrincipal/producto/producto.component';
 import { ListaProductosComponent } from './listaProductosComponent/lista-productos.component';
 import { RouterModule, Route } from '@angular/router';
 import { ListaProductosService } from './list-productos.service';
-import { AgregarProductoComponent } from './compPrincipal/agregarProducto/agregar-producto.component';
-import { InicioComponent } from './compPrincipal/inicio/inicio.component';
+//import { AgregarProductoComponent } from './compPrincipal/agregarProducto/agregar-producto.component';
+//import { InicioComponent } from './compPrincipal/inicio/inicio.component';
 import { BotonLogInComponent } from './boton-log-in/boton-log-in.component';
-import { VentaComponent } from './venta/venta.component';
+//import { VentaComponent } from './venta/venta.component';
 import { SidebarComponent } from './compPrincipal/sidebar/sidebar.component';
+import { HttpClientModule } from '@angular/common/http'
 
-
-const routes: Route[] = [
+/*const routes: Route[] = [
   {path: '', component: InicioComponent},
   {path: 'listaProductos', component: ListaProductosComponent},
   {path: 'agregarProducto', component: AgregarProductoComponent},
   {path: 'venta', component: VentaComponent},
-];
+];*/
 
 @NgModule({
   declarations: [
@@ -44,7 +44,8 @@ const routes: Route[] = [
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    RouterModule.forRoot(routes)
+    //RouterModule.forRoot(routes),
+    HttpClientModule
   ],
   providers: [ListaProductosService],
   bootstrap: [

@@ -8,10 +8,18 @@ import { Producto } from './compPrincipal/interfaces/Producto';
 })
 export class ListaProductosService {
 
-  private productos: Producto[] = [];
+  //URL que obtiene el listado de todos los productos en el backend
+  //private baseURL = "ruta"
 
+  private productos: Producto[] = [];
+  
+  //en el constructor deberiamos agregar el parametro private httpClient: HttpClient para pasarle la informacion
   constructor() { }
 
+  /*Este metodo obtiene los productos del backend
+  obtenerListaDeProductos():Observable<Productos[]>{
+    return this.httpClient.get<Productos[]>(`${this.baseURL}`);
+  }*/
   agregarProducto(producto: Producto) {
     this.productos.push(producto);  
   }
@@ -24,9 +32,6 @@ export class ListaProductosService {
     return this;
   }
 
-  getProductos() {
-    return this.productos;
-  }
 
   obtenerProducto(codigo: number): Producto | undefined{
     // La función pop() retorna el producto resultante del filtro por id

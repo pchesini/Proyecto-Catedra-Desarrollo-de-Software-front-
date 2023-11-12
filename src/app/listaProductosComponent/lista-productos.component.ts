@@ -15,18 +15,44 @@ export class ListaProductosComponent{
   productos: Producto[] = [];
 
   constructor(private listaProductosService: ListaProductosService,  private router: Router){
-    
   }
-  agregarProducto(): void {
-    //nuevo objeto del tipo Producto para agregar a la lista
-    const nuevoProducto: Producto = {
-      codigo: 12323,
-      nombre: 'producto1',
-      descripcion: 'descripcion de producto1',
-      imagenProducto: 'imagenProducto1'
-    }
 
-    this.listaProductosService.agregarProducto(nuevoProducto);
+  //Este método se ejecuta después de que Angular ha inicializado las propiedades vinculadas del componente. 
+  ngOnInit(): void {
+      this.productos = [
+        {
+          "codigo": 1234,
+          "nombre": "remera",
+          "descripcion": "remera marca Nike color azul",
+          "imagenProducto": "img de remera"
+        },
+        {
+          "codigo": 1235,
+          "nombre": "zapatos",
+          "descripcion": "zapatos marca NoSeMarcas color negro",
+          "imagenProducto": "img de zapatos"
+        }
+      ];
+  }
+
+ /*
+ Para pasarle los datos reales de la base de datos, deberiamos hacer lo siguiente:
+ constructor(private listaProductosService: ListaProductosService) {}
+
+ private obtenerEmpleados(){
+  this.listaProductosService.obtenerListaProductos().subscribe(dato =>{
+    this.productos = dato;
+  });
+
+  y en el ngOnInit() se oasaría this.obtenerProducto();
+ }
+
+ en la clase del productoController debe estar la anotacion @CrossOrigin(origins = "url del front") para que se comunique con el front
+ */
+
+  agregarProducto(): void {
+
+    //this.listaProductosService.agregarProducto();
     this.router.navigate(['/agregarProducto']);
   }
     
