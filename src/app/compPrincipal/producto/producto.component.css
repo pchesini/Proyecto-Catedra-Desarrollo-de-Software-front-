@@ -1,7 +1,7 @@
-img {
-   width: 140px;
-   height: 100px;
-   background: blue;
+.img-container {
+   width: 240px;
+   height: 200px;
+   border: 3px solid black;
 }
 
 .card:hover {

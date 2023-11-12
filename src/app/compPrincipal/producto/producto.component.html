@@ -1,19 +1,26 @@
+<div
+  class="card d-flex flex-row align-items-center justify-content-center p-3 mb-2 bg-light-subtle text-emphasis-light shadow p-3 mb-5 bg-body-tertiary rounded"
+  style="width: 25rem; font-size: 14px">
+  <div class="img-container">
+    <img
+      [src]="producto.imagenProducto"
+      class="card-img-top mt-3"
+      alt="{{ producto.nombre }}"
+    />
+  </div>
 
-<div class="card
-           d-flex align-items-center justify-content-center 
-           p-3 mb-2 bg-light-subtle text-emphasis-light
-           shadow p-3 mb-5 bg-body-tertiary rounded" style="width: 15rem; font-size: 14px;">
-  <img [src]="producto.imagenProducto" class="card-img-top mt-3" alt="{{producto.nombre}}">
-  <div class="card-body">
-    <h5 class="card-title">Nombre Producto</h5>
+  <div>
+    <div class="card-body">
+      <h5 class="card-title">Nombre Producto</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Codigo: {{ producto.codigo }}</li>
+      <li class="list-group-item">Descripcion: {{ producto.descripcion }}</li>
+      <li class="list-group-item">Estado de venta:</li>
+    </ul>
+    <div class="card-body">
+      <a href="#" class="btn btn-primary mx-2">Ver Oferta</a>
+    </div>
   </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">Codigo: {{producto.codigo}}</li>
-    <li class="list-group-item">Descripcion: {{producto.descripcion}}</li>
-    <li class="list-group-item">Estado de venta: </li>
-  </ul>
-  <div class="card-body">
-    <a href="#" class="btn btn-primary mx-2">Ver Oferta</a>
-  </div>
+  
 </div>
-
